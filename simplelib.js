@@ -11,7 +11,7 @@ window.onload = function() {
     setup();
     setInterval(draw, 1000/frame_rate);
 }
-function createWindow(width, height) {
+function createCanvas(width, height) {
     canvas.width = width;
     canvas.height = height;
     ctx.fillStyle = color;
@@ -40,6 +40,11 @@ function circle(x, y, radius, color) {
     ctx.fillStyle = color;
     ctx.arc(x, y, radius, 0, 2*Math.PI);
     ctx.fill();
+    document.body.appendChild(canvas);
+}
+function text(string, x, y, color) {
+    ctx.fillStyle = color;
+    ctx.fillText(string, x, y);
     document.body.appendChild(canvas);
 }
 onmousemove = function(e) {
