@@ -6,4 +6,5 @@ You can put it in your javascript code by putting this in the main html file:
 ```
 Or you can just download it for yourself.
 ### Why did you make this?
-Because I could. And to make coding more easy and accessible to people. Thanks for trying out and criticism is needed as it is helpful!
+Because I could. And to make coding more easy and accessible to people. Thanks for trying out and criticism is needed as it is helpful!  
+[Main Website(Click Me!)](https://jmlisowski.github.io) 
