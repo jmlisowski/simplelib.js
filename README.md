@@ -1,8 +1,9 @@
 # simplelib.js
 simplelib.js is, well, a simple JS library.
-You can put it in your javascript code by putting this in the main html file:
+Download the .zip file, extract it and put the simplelib.js file in the folder you are working in.
+Now you can put it in your javascript code by putting this in the main html file:
 ```html
-<script src="https://raw.githubusercontent.com/jmlisowski/simplelib.js/main/simplelib.js"></script>
+<script src="simplelib.js"></script>
 ```
 and include your main js file here:
 ```
