@@ -1,7 +1,7 @@
-var canvas = document.createElement('canvas');
-var ctx = canvas.getContext('2d');
-var windowWidth = window.innerWidth - 25;
-var windowHeight = window.innerHeight - 10;
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+const windowWidth = window.innerWidth - 25;
+const windowHeight = window.innerHeight - 10; 
 var winwidth;
 var winheight;
 var frame_rate = 100;
@@ -22,9 +22,11 @@ function createCanvas(width, height) {
 }
 function background(funcColor) {
     color = funcColor;
-    ctx.fillStyle = color;
-    ctx.fillRect(0, 0, winwidth, winheight);
-    document.body.appendChild(canvas);
+}
+function clear() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    createCanvas(canvas.width, canvas.height);
+    background(color);
 }
 function frameRate(fr) {
     frame_rate = fr;
@@ -49,5 +51,5 @@ function text(string, x, y, color) {
 }
 onmousemove = function(e) {
     mouseX = e.clientX;
-    mouseY = e.clientY;
+    mouseY = e.clgientY;
 }
