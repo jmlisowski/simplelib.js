@@ -6,7 +6,7 @@ Now you can put it in your javascript code by putting this in the main html file
 <script src="simplelib.js"></script>
 ```
 and include your main js file here:
-```
+```html
 <script src="filename.js"></script>
 ```
 you can replace filename with whatever you want, but keep the .js there and make sure to actually make that file!
