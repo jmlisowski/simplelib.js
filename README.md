@@ -12,4 +12,8 @@ and include your main js file here:
 you can replace filename with whatever you want, but keep the .js there and make sure to actually make that file!
 ### Why did I make this?
 Because I could. And to make coding more easy and accessible to people. Thanks for trying out and criticism is needed as it is helpful!  
-[Main Website(Click Me!)](https://jmlisowski.github.io) 
+
+### Hey! I want to see your code!
+If you want to see the library's code, it is open source(under the MIT License), and you can make changes to that code. If, however, you see something wrong with my code and want to make a pull request and edit some code, go right ahead! It is very much needed for this project to grow to it's full potential.
+
+### [Main Website](https://jmlisowski.github.io)
