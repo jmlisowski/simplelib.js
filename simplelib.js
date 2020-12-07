@@ -47,6 +47,9 @@ function text(string, x, y, color) {
     ctx.fillStyle = color;
     ctx.fillText(string, x, y);
     document.body.appendChild(canvas);
+} 
+function addListener(event, func) {
+    canvas.addEventListener(event, func);
 }
 onmousemove = function(e) {
     mouseX = e.clientX;
