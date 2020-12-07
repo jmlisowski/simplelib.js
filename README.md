@@ -4,6 +4,10 @@ Download the .zip file, extract it and put the simplelib.js file in the folder y
 Now you can put it in your javascript code by putting this in the main html file:
 ```html
 <script src="simplelib.js"></script>
+```  
+If you do not want to download the simplelib.js file you can put this into your code
+```html
+<script src="http://cdn.jsdelivr.net/gh/jmlisowski/simplelib.js/simplelib.js"></script>
 ```
 and include your main js file here:
 ```html
