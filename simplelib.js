@@ -2,22 +2,21 @@ const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 const windowWidth = window.innerWidth - 25;
 const windowHeight = window.innerHeight - 10; 
-var winwidth;
-var winheight;
+var width;
+var height;
 var frame_rate = 100;
 var color = 'white';
-var mouseX, mouseY;
 window.onload = function() {
     setup();
     setInterval(draw, 1000/frame_rate);
 }
-function createCanvas(width, height) {
-    canvas.width = width;
-    canvas.height = height;
+function createCanvas(canvasWidth, canvasHeight) {
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    winwidth = width;
-    winheight = height;
+    width = canvasWidth;
+    height = canvasHeight;
     document.body.appendChild(canvas);
 }
 function background(funcColor) {
