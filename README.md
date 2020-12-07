@@ -9,8 +9,8 @@ If you do not want to download the simplelib.js file you can put this into your 
 ```html
 <script src="http://cdn.jsdelivr.net/gh/jmlisowski/simplelib.js/simplelib.js"></script>
 ```
-But take note that this will not work if you don't have internet access.  
-After that, include your main js file here:
+But take note that this will not work if you don't have internet access. On the bright side, you have automatic updates.
+After you make a decision on how you are going to include simplelib.js into your code, include your main js file here:
 ```html
 <script src="filename.js"></script>
 ```
