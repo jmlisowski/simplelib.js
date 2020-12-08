@@ -10,7 +10,6 @@ window.onload = function() {
     setup();
     document.body.style.margin = '0px';
     setInterval(draw, 1000/frame_rate);
-    
 }
 function createCanvas(canvasWidth, canvasHeight) {
     canvas.width = canvasWidth;
