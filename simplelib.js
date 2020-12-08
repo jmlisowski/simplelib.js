@@ -1,7 +1,7 @@
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
-const windowWidth = window.innerWidth - 25;
-const windowHeight = window.innerHeight - 10; 
+const windowWidth = window.innerWidth;
+const windowHeight = window.innerHeight; 
 var width;
 var height;
 var frame_rate = 100;
@@ -9,6 +9,7 @@ var color = 'white';
 window.onload = function() {
     setup();
     setInterval(draw, 1000/frame_rate);
+    document.body.style.margin = '0px';
 }
 function createCanvas(canvasWidth, canvasHeight) {
     canvas.width = canvasWidth;
@@ -50,6 +51,13 @@ function text(string, x, y, color) {
 } 
 function addListener(event, func) {
     canvas.addEventListener(event, func);
+}
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate;
+    do {
+        currentDate = Date.now();
+    } while(currentDate - date < milliseconds);
 }
 onmousemove = function(e) {
     mouseX = e.clientX;
