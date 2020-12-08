@@ -8,8 +8,9 @@ var frame_rate = 100;
 var color = 'white';
 window.onload = function() {
     setup();
-    setInterval(draw, 1000/frame_rate);
     document.body.style.margin = '0px';
+    setInterval(draw, 1000/frame_rate);
+    
 }
 function createCanvas(canvasWidth, canvasHeight) {
     canvas.width = canvasWidth;
