@@ -16,8 +16,8 @@ function createCanvas(canvasWidth, canvasHeight) {
     canvas.height = canvasHeight;
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    width = canvasWidth;
-    height = canvasHeight;
+    width = canvas.width;
+    height = canvas.height;
     document.body.appendChild(canvas);
 }
 function background(funcColor) {
