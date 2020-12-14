@@ -6,60 +6,68 @@ var width;
 var height;
 var frame_rate = 100;
 var color = 'white';
-window.onload = function() {
+window.onload =_=> {
     setup();
     document.body.style.margin = '0px';
     setInterval(draw, 1000/frame_rate);
 }
-function createCanvas(canvasWidth, canvasHeight) {
+createCanvas = (canvasWidth, canvasHeight) => {
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    width = canvas.width;
-    height = canvas.height;
+    width = canvasWidth;
+    height = canvasHeight;
     document.body.appendChild(canvas);
 }
-function background(funcColor) {
-    color = funcColor;
-}
-function clear() {
+background = funcColor => {color = funcColor}
+clear =_=> {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     createCanvas(canvas.width, canvas.height);
     background(color);
 }
-function frameRate(fr) {
-    frame_rate = fr;
-    setInterval(draw, 1000/fr);
-}
-function rect(x, y, width, height, color) {
+rect = (x, y, width, height, color = 'black') => {
     ctx.fillStyle = color;
     ctx.fillRect(x, y, width, height);
     document.body.appendChild(canvas);
 }
-function circle(x, y, radius, color) {
+circle = (x, y, radius, color = 'black') => {
     ctx.beginPath();
     ctx.fillStyle = color;
     ctx.arc(x, y, radius, 0, 2*Math.PI);
     ctx.fill();
     document.body.appendChild(canvas);
 }
-function text(string, x, y, color) {
+text = (string, x, y, color = 'black') => {
     ctx.fillStyle = color;
     ctx.fillText(string, x, y);
     document.body.appendChild(canvas);
 } 
-function addListener(event, func) {
-    canvas.addEventListener(event, func);
-}
-function sleep(milliseconds) {
+addListener = (event, func) => {canvas.addEventListener(event, func)}
+sleep = milliseconds => {
     const date = Date.now();
     let currentDate;
     do {
         currentDate = Date.now();
     } while(currentDate - date < milliseconds);
 }
-onmousemove = function(e) {
+line = (x1, y1, x2, y2, width = 1, color = 'black') => {
+    ctx.beginPath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+}
+beginPath = (width = 1, color = 'black') => {
+    ctx.beginPath()
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+}
+startPoint = (x, y) => {ctx.moveTo(x, y)}
+vertex = (x, y) => {ctx.lineTo(x, y)}
+endPath =_=> {ctx.stroke()}
+onmousemove = e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 }
