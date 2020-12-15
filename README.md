@@ -7,7 +7,7 @@ Now you can put it in your javascript code by putting this in the main html file
 ```  
 If you do not want to download the simplelib.js file you can put this into your code
 ```html
-<script src="http://cdn.jsdelivr.net/gh/jmlisowski/simplelib.js/simplelib.js"></script>
+<script src="https://git.io/simplelib.js"></script>
 ```
 But take note that this will not work if you don't have internet access. On the bright side, you have automatic updates.  
 After you make a decision on how you are going to include simplelib.js into your code, include your main js file here:
