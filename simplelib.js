@@ -87,18 +87,20 @@ sleep = milliseconds => {
         currentDate = Date.now();
     } while(currentDate - date < milliseconds);
 }
-line = (x1, y1, x2, y2, width = 1, color = 'black') => {
+line = (x1, y1, x2, y2, width = 1, color = 'black', lineCap = 'butt') => {
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = width;
+    ctx.lineCap = lineCap;
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
     ctx.stroke();
 }
-beginPath = (width = 1, color = 'black') => {
+beginPath = (width = 1, color = 'black', lineCap = 'butt') => {
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = width;
+    ctx.lineCap = lineCap;
 }
 startPoint = (x, y) => {ctx.moveTo(x, y)}
 vertex = (x, y) => {ctx.lineTo(x, y)}
