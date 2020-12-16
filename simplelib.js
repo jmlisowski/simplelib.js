@@ -6,10 +6,16 @@ var width;
 var height;
 var frame_rate = 100;
 var color = 'white';
+var call_draw;
 window.onload =_=> {
+    call_draw = true;
     setup();
     document.body.style.margin = '0px';
-    setInterval(draw, 1000/frame_rate);
+    if(call_draw) {
+        setInterval(draw, 1000/frame_rate);
+    } else if (!call_draw) {
+        return;
+    }
 }
 createCanvas = (canvasWidth, canvasHeight) => {
     canvas.width = canvasWidth;
