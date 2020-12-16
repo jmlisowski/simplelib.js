@@ -7,7 +7,7 @@ var height;
 var frame_rate = 100;
 var color = 'white';
 var call_draw;
-window.onload =_=> {
+window.onload = () => {
     call_draw = true;
     setup();
     document.body.style.margin = '0px';
@@ -26,8 +26,8 @@ createCanvas = (canvasWidth, canvasHeight) => {
     height = canvasHeight;
     document.body.appendChild(canvas);
 }
-background = funcColor => {color = funcColor}
-clear =_=> {
+background = (funcColor) => {color = funcColor}
+clear = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     createCanvas(canvas.width, canvas.height);
     background(color);
@@ -80,7 +80,7 @@ text = (string, x, y, color = 'black') => {
     document.body.appendChild(canvas);
 } 
 addListener = (event, func) => {canvas.addEventListener(event, func)}
-sleep = milliseconds => {
+sleep = (milliseconds) => {
     const date = Date.now();
     let currentDate;
     do {
@@ -104,8 +104,8 @@ beginPath = (width = 1, color = 'black', lineCap = 'butt') => {
 }
 startPoint = (x, y) => {ctx.moveTo(x, y)}
 vertex = (x, y) => {ctx.lineTo(x, y)}
-endPath =_=> {ctx.stroke()}
-onmousemove = e => {
+endPath = () => {ctx.stroke()}
+onmousemove = (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 }
