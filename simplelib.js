@@ -9,6 +9,7 @@ var color = 'white';
 var call_draw;
 window.onload =_=> {
     call_draw = true;
+    document.title = 'simplelib.js window';
     setup();
     document.body.style.margin = '0px';
     if(call_draw) {
@@ -17,6 +18,7 @@ window.onload =_=> {
         return;
     }
 }
+title = string => document.title = string;
 createCanvas = (canvasWidth, canvasHeight) => {
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
@@ -79,7 +81,7 @@ text = (string, x, y, color = 'black') => {
     ctx.fillText(string, x, y);
     document.body.appendChild(canvas);
 } 
-addListener = (event, func) => {canvas.addEventListener(event, func)}
+addListener = (event, func) => canvas.addEventListener(event, func);
 sleep = milliseconds => {
     const date = Date.now();
     let currentDate;
@@ -102,9 +104,9 @@ beginPath = (width = 1, color = 'black', lineCap = 'butt') => {
     ctx.lineWidth = width;
     ctx.lineCap = lineCap;
 }
-startPoint = (x, y) => {ctx.moveTo(x, y)}
-vertex = (x, y) => {ctx.lineTo(x, y)}
-endPath =_=> {ctx.stroke()}
+startPoint = (x, y) => ctx.moveTo(x, y);
+vertex = (x, y) => ctx.lineTo(x, y);
+endPath =_=> ctx.stroke();
 onmousemove = e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
