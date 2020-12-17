@@ -44,7 +44,10 @@ rect = (x, y, width, height, color = 'black', stroke = false) => {
     }
     document.body.appendChild(canvas);
 }
-clearArea = (x, y, width, height) => ctx.clearRect(x, y, width, height);
+clearRect = (x, y, width, height) => {
+    ctx.clearRect(x, y, width, height);
+    document.body.appendChild(canvas);
+}
 triangle = (x1, y1, x2, y2, x3, y3, color = 'black', stroke = false) => {
     ctx.beginPath();
     if(stroke) {
