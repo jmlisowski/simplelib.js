@@ -6,11 +6,14 @@ var width;
 var height;
 var frame_rate = 100;
 var color = 'white';
+var call_draw;
 window.onload = () => {
     call_draw = true;
     document.title = 'simplelib.js window';
-    setup = () => {}
-    draw = () => {}
+    setup();
+    if(call_draw) {
+        draw();
+    }
     document.body.style.margin = '0px';
 }
 title = (string) => document.title = string;
