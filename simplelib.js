@@ -12,7 +12,7 @@ window.onload = () => {
     document.title = 'simplelib.js window';
     setup();
     if(call_draw) {
-        draw();
+        setInterval(draw, 1000/frame_rate)
     }
     document.body.style.margin = '0px';
 }
