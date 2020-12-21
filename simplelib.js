@@ -4,18 +4,18 @@ const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight; 
 var width;
 var height;
-var frame_rate = 100;
 var color = 'white';
 var call_draw;
-window.onload = () => {
+window.onload =_=> {
     call_draw = true;
     document.title = 'simplelib.js window';
     setup();
-    if(call_draw) {
-        setInterval(draw, 1000/frame_rate)
-    }
     document.body.style.margin = '0px';
+    if(call_draw) {
+        frameRate();
+    }
 }
+frameRate = (fr = 100, func = draw) => setInterval(draw, 1000/fr);
 title = (string) => document.title = string;
 createCanvas = (canvasWidth, canvasHeight) => {
     canvas.width = canvasWidth;
@@ -26,7 +26,7 @@ createCanvas = (canvasWidth, canvasHeight) => {
     height = canvasHeight;
     document.body.appendChild(canvas);
 }
-background = (funcColor) => {color = funcColor}
+background = (funcColor) => color = funcColor;
 clear = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     createCanvas(canvas.width, canvas.height);
